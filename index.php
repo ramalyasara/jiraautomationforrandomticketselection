@@ -66,7 +66,7 @@ FunctionsFramework::http('helloHttp', function (ServerRequestInterface $request)
                 'Authorization' => $authHeader,
                 'X-Automation-Webhook-Token' => JIRA_WEBHOOK_SECRET
             ],
-            'json' => ["issues" => $selectedTickets] // ✅ Corrected this line
+            'json' => ["issues" => $selectedTickets] 
         ]);
 
         $responseBody = $response->getBody()->getContents();
